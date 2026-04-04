@@ -5,7 +5,23 @@
 <MudDialogProvider />
 <MudSnackbarProvider />
 
-@Body
+<MudLayout Class="d-flex" Style="min-height: 100vh">
+    <MudAppBar Color="Color.Error">
+        <MudStack Row AlignItems="AlignItems.Center" Spacing="2">
+            <MudIcon Icon="@Icons.Material.Rounded.RocketLaunch" />
+            <MudText Typo="Typo.h6">RocketBets</MudText>
+        </MudStack>
+    </MudAppBar>
+    <MudMainContent Class="d-flex">
+        <MudContainer MaxWidth="MaxWidth.False" Class="d-flex pa-4 gap-4">
+            <MudPaper Width="240px" />
+            <MudPaper Class="flex-grow-1">
+                @Body
+            </MudPaper>
+            <MudPaper Width="300px" />
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
 
 <div id="blazor-error-ui" data-nosnippet>
     An unhandled error has occurred.
